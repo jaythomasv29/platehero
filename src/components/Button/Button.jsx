@@ -3,6 +3,7 @@ import React from 'react'
 import './Button.css'
 
 const STYLES = [
+  "btn",
   "btn--primary--solid",
   "btn--primary--explore",
   "btn--primary--outline"

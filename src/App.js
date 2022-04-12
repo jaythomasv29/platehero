@@ -10,6 +10,7 @@ import PostPage from './pages/PostPage/PostPage';
 import './App.css'
 
 function App() {
+  let user = false
   return (
     <Routes>
     <Route path='/' element={<Navbar />}>
@@ -17,7 +18,7 @@ function App() {
       <Route path='/about' element={<AboutPage />} />
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/create' element={<CreatePostPage />} />
-      <Route path='/signup' element={<SignupPage />} />
+      <Route path='/signup' element={ user ? <HomePage /> : <SignupPage />} />
       <Route path='/posts/:postId' element={<PostPage />} />
     </Route>
 

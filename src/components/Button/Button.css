@@ -5,6 +5,8 @@
   margin-left: 5px;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
 }
 
 .btn--primary--outline {
@@ -26,7 +28,7 @@
   border: 2px solid white;
 }
 
-.btn--primary--solid:hover {
+.btn--primary--solid:hover, .btn:hover {
   background-color: black;
   color: white;
   border-color: black;
