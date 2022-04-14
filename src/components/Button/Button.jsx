@@ -10,10 +10,10 @@ const STYLES = [
 ]
 
 
-function Button({children, buttonStyle}) {
+function Button({children, buttonStyle, onClick}) {
   const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
   return (
-    <button className={`btn ${checkButtonStyle}`}>{children}</button>
+    <button onClick={onClick} className={`btn ${checkButtonStyle}`}>{children}</button>
   )
 }
 

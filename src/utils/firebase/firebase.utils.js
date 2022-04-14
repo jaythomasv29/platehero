@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, setDoc, addDoc,  } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc,  } from "firebase/firestore";
 import {
   getAuth,
-  signInWithRedirect,
+  
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";

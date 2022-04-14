@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import Avatar from '../../images/avatar.jpeg'
-
+import { signInWithGooglePopup, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils'
+import Button from '../Button/Button'
 import './Navbar.css'
 
 function Navbar() {
+
+  const logGoogleUser = async () => {
+     const response = await signInWithGooglePopup()
+     const userDocRef = await createUserDocumentFromAuth(response.user)
+     console.log(userDocRef);
+   }
   return (
     <>
       <nav className="navbar-container">
@@ -27,7 +34,8 @@ function Navbar() {
           </li>
         </ul>
         <div className="navbar-links right">
-          <Link className="signup-btn" to="/signup">SIGN UP</Link>
+          {/* <Link className="signup-btn" onClick={logGoogleUser}>SIGN IN</Link> */}
+          <div className="signup-btn" onClick={logGoogleUser}>SIGN IN</div>
           <img className="avatar-img" src={Avatar} alt="avatar" />
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
